@@ -15,7 +15,7 @@ class InvoiceRequestEdit extends FormRequest
     public function rules()
     {
         return [
-            'invoice_number'        => 'required|unique:invoices|max:255',
+            'invoice_number'        => 'required|max:255',
             // 'invoice_Date'          => 'required',
             'Due_date'              => 'required',
             'product'               => 'required',
@@ -29,7 +29,6 @@ class InvoiceRequestEdit extends FormRequest
     {
         return [
             'invoice_number.required'       => 'يرجي ادخال اسم الفاتورة',
-            'invoice_number.unique'         => 'اسم الفاتورة موجود من قبل ',
             // 'section_id.required'           => 'يجب اختيار القسم ',
             // 'invoice_Date.required'         => 'يجب ادخال تاريخ الفاتورة',
             'Due_date.required'             => 'يجب ادخال تاريخ الاستحقاق/ الدفع' ,

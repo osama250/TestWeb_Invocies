@@ -13,9 +13,8 @@ class SectionRequestsEdit extends FormRequest
     }
     public function rules()
     {
-        $id = 0;
-        return [
-            'section_name' => 'required|max:255|unique:sections,section_name,'.$id,
+        return [  // use id that when make update i want know this id to know is section find befor or not 
+            'section_name' => 'required|unique:sections,section_name,'. $this->id,
             'description'  => 'required',
         ];
     }

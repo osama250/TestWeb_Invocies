@@ -4,9 +4,7 @@
     <link href="{{ URL::asset('assets/plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!--Internal  treeview -->
     <link href="{{ URL::asset('assets/plugins/treeview/treeview-rtl.css') }}" rel="stylesheet" type="text/css" />
-@section('title')
-    تعديل الصلاحيات - مورا سوفت للادارة القانونية
-@stop
+@section('title')  تعديل الصلاحيات  @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
@@ -57,7 +55,9 @@
                                 <ul>
                                     <li>
                                         @foreach ($permission as $value)
-                                            <label>{{ Form::checkbox('permission[]', $value->id, in_array($value->id, $rolePermissions) ? true : false, ['class' => 'name']) }}
+                                            <label>{{ Form::checkbox('permission[]',
+                                                $value->id, in_array($value->id, $rolePermissions)
+                                                ? true : false, ['class' => 'name']) }}
                                                 {{ $value->name }}</label>
                                             <br />
                                         @endforeach

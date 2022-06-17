@@ -2,10 +2,7 @@
 @section('css')
     <!--Internal   Notify -->
     <link href="{{ URL::asset('assets/plugins/notify/css/notifIt.css') }}" rel="stylesheet" />
-@section('title')
-    صلاحيات المستخدمين - مورا سوفت للادارة القانونية
-@stop
-
+@section('title')  صلاحيات المستخدمين    @stop
 
 @endsection
 @section('page-header')
