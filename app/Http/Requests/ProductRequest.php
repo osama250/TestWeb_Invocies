@@ -14,16 +14,14 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'Product_name'              => 'required|unique:prodcuts|max:255' ,
-            'description'               => 'required',
+            'Product_name'              => 'required|unique:prodcuts|max:255',
             'section_id'                => 'required'
         ];
     }
     public function messages() {
         return [
             'Product_name.required'     => 'يرجي ادخال اسم المنتج',
-            'Product_name.unique'       => 'اسم المنج مسجل مسبقا',
-            'description.required'      => 'يرجي ادخال الوصف',
+            'Product_name.unique'       => 'لا يمكن تعديل البيانات اسم المنتج مسجل مسبقا',
             'section_id.required'       => 'يجب اختيار القسم'
         ];
     }

@@ -4,9 +4,7 @@
     <link href="{{ URL::asset('assets/plugins/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
     <!--Internal  treeview -->
     <link href="{{ URL::asset('assets/plugins/treeview/treeview-rtl.css') }}" rel="stylesheet" type="text/css" />
-@section('title')
-    اضافة الصلاحيات - مورا سوفت للادارة القانونية
-@stop
+@section('title') اضافة الصلاحيات @stop
 
 @endsection
 @section('page-header')
@@ -64,8 +62,9 @@
                             </li>
                             @foreach ($permission as $value)
                                 <label
-                                    style="font-size: 16px;">{{ Form::checkbox('permission[]', $value->id, false, ['class' => 'name']) }}
-                                    {{ $value->name }}</label>
+                                    style="font-size: 16px;">
+                                    {{ Form::checkbox('permission[]', $value->id, false, ['class' => 'name']) }}
+                                    {{ $value->name }}</label> <br>
 
                             @endforeach
                             </li>
